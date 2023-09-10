@@ -1,0 +1,279 @@
+:root {
+    --text-color: white;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #191D23;
+}
+
+/* Navbar Style */
+
+.navbar {
+    z-index: 3;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(0);
+    transition: backdrop-filter 0.5s ease;
+}
+
+
+* {
+    z-index: 2;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--text-color);
+}
+
+.nav-link {
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+.nav-link.active {
+    font-weight: 700;
+}
+
+.follow {
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 15px;
+}
+
+.follow p,
+.follow a:first-child {
+    display: inline-block;
+    margin-left: 12px;
+    color: var(--text-color);
+}
+
+.follow a {
+    color: var(--text-color);
+    margin-left: 12px;
+    margin-right: 3px;
+    transition: all .50s ease;
+}
+
+.follow a:hover {
+    color: blue;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+/* Navbar End Style */
+
+
+/* Home Section style */
+
+#home {
+    background-image: url(/asset/img/background-home.png);
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+#home::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.custom-image {
+    max-width: 50%;
+    height: auto;
+    margin-top: 20px;
+  }
+
+@media (max-width: 768px) {
+    .custom-image {
+      max-width: 50%;
+      height: auto;
+      margin-top: 0;
+    }
+  }
+
+.home-tagline h1 {
+    color: var(--text-color);
+    font-weight: 700;
+    font-size: 36px;
+    font-style: normal;
+    width: 95%;
+}
+
+@media (max-width: 768px) {
+    .home-tagline h1 {
+        margin-top: 45px;
+      font-size: 24px;
+    }
+  }
+
+.home-tagline p {
+    color: var(--text-color);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    margin-top: 30px;
+    margin-bottom: 35px;
+    line-height: normal;
+    width: 65%;
+}
+
+@media (max-width: 768px) {
+    .home-tagline p {
+      font-size: 14px;
+    }
+  }
+
+.btn {
+    border-radius: 12px;
+    transition-duration: 0.4s;
+    size: 20px;
+    margin-top: 35px;
+}
+
+.btn:hover {
+    background-color: green;
+    /* Green */
+    color: white;
+}
+
+#home .home-text p{
+	margin:0;
+	overflow: hidden;
+}
+
+#home .home-text p span {
+    font-size: 32px;
+    color: rgb(218, 218, 38);
+    font-weight: 700;
+    display: inline-block;
+    line-height: 46px;
+    display: none;
+    text-shadow: inset 0 0 10px #FF5F1F;
+    margin-bottom: 20px;
+  }
+
+
+/* about Section */
+#about {
+    padding: 100px 0;
+}
+
+.about-judul {
+    margin-bottom: 120px;
+}
+
+.about-img {
+    margin-bottom: 50px;
+}
+
+.about-text h2 {
+    color: var(--text-color);
+    margin-bottom: 50px;
+}
+
+#about p {
+    display: inline;
+    inline-size: 16px;
+    margin-inline-start: 12px;
+    color: white;
+    font-family: 'poppins', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+#about i {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    color: white;
+}
+
+
+
+/* hobby Start */
+
+.services-text {
+    color: var(--text-color);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+}
+
+.card-img-top {
+    width: 104.161px;
+    height: 118.125px;
+}
+
+#hobby {
+    padding: 80px 0;
+}
+
+.card {
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, .08), 0 0 6px rgba(0, 0, 0, .05);
+    transition: .3s transform cubic-bezier(.155, 1.105, .295, 1.12), .3s box-shadow, .3s -webkit-transform cubic-bezier(.155, 1.105, .295, 1.12);
+    cursor: pointer;
+    margin: 15px; 
+}
+
+@media (max-width: 992px) {
+    #hobby .card {
+      max-width: calc(50% - 20px); /* Untuk tampilan laptop, setiap kartu menempati 50% lebar container dengan ruang 10px di sisi kanan dan kiri */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    #hobby .card {
+      max-width: 100%; /* Di perangkat mobile, kartu akan mengisi lebar container */
+    }
+  }
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0, 0, 0, .06);
+    color: black;
+}
+
+.container-fluid {
+    background-position: center;
+    background-size: cover;
+}
+
+.paragraf-services {
+    color: var(--text-color);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    margin-top: 30px;
+    margin-bottom: 35px;
+    line-height: normal;
+    width: 70%;
+}
+
+.card-link {
+    text-decoration: none;
+    color: #fff;
+}
+
+#hobby h4 {
+    font-weight: 700;
+    font-size: 16px;
+    font-family: 'Poppins';
+}
+
+#hobby i {
+    margin-left: 8px;
+}
+
